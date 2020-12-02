@@ -1,22 +1,48 @@
 import 'package:flutter/material.dart';
 import 'package:kitchenventory/screens/freezer.dart';
 import 'package:kitchenventory/screens/location.dart';
+import 'package:kitchenventory/screens/pantry.dart';
+import 'package:kitchenventory/screens/refrigerator.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int _page = 1;
+
+  final pageList = [PantryScreen(), RefrigeratorScreen(), FreezerScreen()];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: FreezerScreen(),
+      title: 'Kitchenventory',
+      home: Scaffold(
+          body: pageList[_page],
+          bottomNavigationBar: CurvedNavigationBar(
+            backgroundColor: Color(0xFF2D3447),
+            buttonBackgroundColor: Color(0xFFFFFFFF),
+            height: 50,
+            animationDuration: Duration(milliseconds: 200),
+            animationCurve: Curves.ease,
+            index: 0,
+            items: [
+              Icon(Icons.shopping_basket, size: 30.0),
+              Icon(Icons.kitchen, size: 30.0),
+              Icon(Icons.ac_unit, size: 30.0)
+            ],
+            onTap: (index) {
+              setState(() {
+                _page = index;
+              });
+            },
+          )),
     );
   }
 }

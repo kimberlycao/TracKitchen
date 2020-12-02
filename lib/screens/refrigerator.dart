@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:kitchenventory/screens/freezer.dart';
 import 'package:kitchenventory/screens/pantry.dart';
-import 'package:kitchenventory/screens/refrigerator.dart';
 
-class FreezerScreen extends StatefulWidget {
+class RefrigeratorScreen extends StatefulWidget {
   @override
-  _FreezerScreenState createState() => _FreezerScreenState();
+  _RefrigeratorScreenState createState() => _RefrigeratorScreenState();
 }
 
-class _FreezerScreenState extends State<FreezerScreen> {
+class _RefrigeratorScreenState extends State<RefrigeratorScreen> {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
@@ -24,7 +24,7 @@ class _FreezerScreenState extends State<FreezerScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Freezer",
+                  Text("Refrigerator",
                       style: GoogleFonts.breeSerif(
                           color: Colors.white,
                           fontSize: 40.0,

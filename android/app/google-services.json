@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1077288358405",
+    "firebase_url": "https://kitchenventory.firebaseio.com",
+    "project_id": "kitchenventory",
+    "storage_bucket": "kitchenventory.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077288358405:android:e30e8e85cec96baaf7c26c",
+        "android_client_info": {
+          "package_name": "com.example.kitchenventory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1077288358405-j37tr4llqh22bb11upt3lfnttf4tj1u9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kitchenventory",
+            "certificate_hash": "e068e7691383ca808e188745950baaf992ae3eae"
+          }
+        },
+        {
+          "client_id": "1077288358405-55m6m0f41ujuadveoggafd5se76cq1rf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD902P1OlL9hOBwOikUfXNEov2vFDPMw80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1077288358405-55m6m0f41ujuadveoggafd5se76cq1rf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
