@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:kitchenventory/screens/pantry.dart';
-import 'package:kitchenventory/screens/refrigerator.dart';
 
 class FreezerScreen extends StatefulWidget {
   @override

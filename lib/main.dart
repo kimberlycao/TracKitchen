@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:kitchenventory/screens/freezer.dart';
-import 'package:kitchenventory/screens/location.dart';
-import 'package:kitchenventory/screens/pantry.dart';
-import 'package:kitchenventory/screens/refrigerator.dart';
+import 'package:kitchenventory/screens/Freezer.dart';
+import 'package:kitchenventory/screens/Location.dart';
+import 'package:kitchenventory/screens/Pantry.dart';
+import 'package:kitchenventory/screens/Refrigerator.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 void main() {
@@ -15,7 +15,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int _page = 1;
+  int _page = 0;
 
   final pageList = [PantryScreen(), RefrigeratorScreen(), FreezerScreen()];
   @override

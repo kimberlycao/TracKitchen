@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:kitchenventory/screens/freezer.dart';
-import 'package:kitchenventory/screens/refrigerator.dart';
+import 'package:kitchenventory/widgets/FoodList.dart';
 
 class PantryScreen extends StatefulWidget {
   @override
@@ -32,6 +30,8 @@ class _PantryScreenState extends State<PantryScreen> {
                 ],
               ),
             ),
+            SizedBox(height: screenHeight * 0.02),
+            Expanded(child: Container(child: FoodList())),
           ],
         ),
       ),
