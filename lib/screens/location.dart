@@ -6,12 +6,12 @@ import 'package:kitchenventory/screens/Pantry.dart';
 import 'package:kitchenventory/screens/Refrigerator.dart';
 import 'package:kitchenventory/screens/Freezer.dart';
 
-class FoodLocation extends StatefulWidget {
+class LocationScreen extends StatefulWidget {
   @override
-  _FoodLocationState createState() => _FoodLocationState();
+  _LocationScreenState createState() => _LocationScreenState();
 }
 
-class _FoodLocationState extends State<FoodLocation> {
+class _LocationScreenState extends State<LocationScreen> {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
