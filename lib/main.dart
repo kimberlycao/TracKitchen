@@ -23,6 +23,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Kitchenventory',
+      theme: ThemeData(fontFamily: 'BreeSerif'),
       home: Scaffold(
           body: pageList[_page],
           bottomNavigationBar: CurvedNavigationBar(

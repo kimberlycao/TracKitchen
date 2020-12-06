@@ -1,4 +1,4 @@
-import 'package:kitchenventory/Widgets/FoodCard.dart';
+import 'package:kitchenventory/Widgets/FoodCardDescription.dart';
 
 class Food {
   String name;
