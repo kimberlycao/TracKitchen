@@ -30,6 +30,21 @@ final List<Food> foods = [
       quantity: 2,
       quantityType: QuantityType.individuals,
       purchaseDate: DateTime.now()),
+  Food(
+      name: "Broccoli",
+      quantity: 2,
+      quantityType: QuantityType.individuals,
+      purchaseDate: DateTime.now()),
+  Food(
+      name: "Broccoli",
+      quantity: 2,
+      quantityType: QuantityType.individuals,
+      purchaseDate: DateTime.now()),
+  Food(
+      name: "Broccoli",
+      quantity: 2,
+      quantityType: QuantityType.individuals,
+      purchaseDate: DateTime.now()),
 ];
 
 class FoodList extends StatelessWidget {

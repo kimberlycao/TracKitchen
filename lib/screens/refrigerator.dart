@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kitchenventory/Widgets/SearchBar.dart';
 
 class RefrigeratorScreen extends StatefulWidget {
   @override
@@ -29,6 +30,8 @@ class _RefrigeratorScreenState extends State<RefrigeratorScreen> {
                 ],
               ),
             ),
+            SizedBox(height: screenHeight * 0.02),
+            SearchBar(),
           ],
         ),
       ),

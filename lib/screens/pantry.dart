@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kitchenventory/Widgets/SearchBar.dart';
 import 'package:kitchenventory/widgets/FoodList.dart';
 
 class PantryScreen extends StatefulWidget {
@@ -26,10 +27,12 @@ class _PantryScreenState extends State<PantryScreen> {
                       style: GoogleFonts.breeSerif(
                           color: Colors.white,
                           fontSize: 40.0,
-                          fontWeight: FontWeight.w100))
+                          fontWeight: FontWeight.w100)),
                 ],
               ),
             ),
+            SizedBox(height: screenHeight * 0.02),
+            SearchBar(),
             SizedBox(height: screenHeight * 0.02),
             Expanded(child: Container(child: FoodList())),
           ],

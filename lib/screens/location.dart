@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:kitchenventory/Widgets/SearchBar.dart';
 import 'package:kitchenventory/widgets/LocationCard.dart';
 import 'package:kitchenventory/screens/Pantry.dart';
 import 'package:kitchenventory/screens/Refrigerator.dart';
@@ -51,6 +52,8 @@ class _LocationScreenState extends State<LocationScreen> {
               ],
             ),
           ),
+          SizedBox(height: screenHeight * 0.02),
+          SearchBar(),
           SizedBox(height: screenHeight * 0.05),
           Expanded(
               child: ListView(
