@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kitchenventory/Classes/Food.dart';
 import 'package:intl/intl.dart';
 
-enum QuantityType { individuals, bags, boxes, bundles }
+enum QuantityType { individuals, bags, boxes, bundles, bottles }
 
 class FoodCardDescription extends StatelessWidget {
   final Food food;
@@ -31,7 +31,7 @@ class FoodCardDescription extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontSize: 15.0, color: Color(0xFF2D3447))),
                 Text(
-                    '${'Purchased on:'} ${DateFormat('MM/dd/yyyy').format(food.purchaseDate).toString()}',
+                    '${'Best before:'} ${DateFormat('MM/dd/yyyy').format(food.bestBeforeDate).toString()}',
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontSize: 15.0, color: Color(0xFF2D3447))),
@@ -53,5 +53,7 @@ String quantityTypeToString(QuantityType quantityType) {
       return "Boxes";
     case QuantityType.bundles:
       return "Bundles";
+    case QuantityType.bottles:
+      return "Bottles";
   }
 }

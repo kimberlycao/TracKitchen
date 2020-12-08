@@ -22,8 +22,7 @@ class FoodCard extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: Container(
                         child: Image(
-                            image:
-                                AssetImage('lib/assets/images/groceries.png'),
+                            image: AssetImage('assets/images/groceries.png'),
                             height: 50.0),
                       ),
                     ),

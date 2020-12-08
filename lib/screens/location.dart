@@ -48,7 +48,7 @@ class _LocationScreenState extends State<LocationScreen> {
               children: [
                 Text("Location",
                     style: GoogleFonts.breeSerif(
-                        color: Colors.white, fontSize: 40.0))
+                        color: Colors.white, fontSize: 30.0))
               ],
             ),
           ),

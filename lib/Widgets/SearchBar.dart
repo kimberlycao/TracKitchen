@@ -11,12 +11,13 @@ class _SearchBarState extends State<SearchBar> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15.0),
       child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 5.0),
+          padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 5.0),
           decoration: BoxDecoration(
               color: Colors.white, borderRadius: BorderRadius.circular(30.0)),
           child: TextField(
               decoration: InputDecoration(
                   hintText: "Search",
+                  hintStyle: TextStyle(fontSize: 20.0),
                   icon: Icon(Icons.search),
                   border: InputBorder.none))),
     );

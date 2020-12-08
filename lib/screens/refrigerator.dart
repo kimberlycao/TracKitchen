@@ -13,38 +13,20 @@ class _RefrigeratorScreenState extends State<RefrigeratorScreen> {
     double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Color(0xFF2D3447),
+      appBar: AppBar(
+          title: Text("Refrigerator",
+              style: GoogleFonts.breeSerif(
+                  color: Colors.white,
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.w100)),
+          backgroundColor: Colors.transparent,
+          elevation: 0),
       body: SafeArea(
         child: Column(
           children: [
             SizedBox(height: screenHeight * 0.02),
-            Padding(
-              padding: const EdgeInsets.only(left: 20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("Refrigerator",
-                      style: GoogleFonts.breeSerif(
-                          color: Colors.white,
-                          fontSize: 40.0,
-                          fontWeight: FontWeight.w100))
-                ],
-              ),
-            ),
-            SizedBox(height: screenHeight * 0.02),
             SearchBar(),
           ],
-        ),
-      ),
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Container(
-          height: 60.0,
-          width: 60.0,
-          child: FloatingActionButton(
-            onPressed: () {},
-            child: Icon(Icons.add, color: Color(0xFF2D3447), size: 30),
-            backgroundColor: Colors.white,
-          ),
         ),
       ),
     );
