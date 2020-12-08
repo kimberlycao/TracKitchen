@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kitchenventory/Classes/Food.dart';
+import 'package:kitchenventory/Screens/NewFoodItem/NewFoodReview.dart';
 import 'package:kitchenventory/Screens/Pantry.dart';
-
-DateTime selectedDate = DateTime.now();
 
 class NewFoodBestBefore extends StatefulWidget {
   final Food food;
@@ -13,6 +12,7 @@ class NewFoodBestBefore extends StatefulWidget {
 }
 
 class _NewFoodBestBeforeState extends State<NewFoodBestBefore> {
+  DateTime selectedDate = DateTime.now();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,9 +31,32 @@ class _NewFoodBestBeforeState extends State<NewFoodBestBefore> {
             Text("Best Before Date:",
                 style: TextStyle(fontSize: 25.0, color: Colors.white)),
             //Display selected date
-            Text(''),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Text(
+                '${selectedDate.toLocal()}'.split(' ')[0],
+                style: TextStyle(color: Colors.white, fontSize: 22.0),
+              ),
+            ),
             RaisedButton(
-                onPressed: () => _selectDate(context),
+                onPressed: () async {
+                  final DateTime picked = await showDatePicker(
+                      context: context,
+                      initialDate: DateTime.now(),
+                      firstDate: DateTime.now(),
+                      lastDate: DateTime(2030),
+                      errorInvalidText: 'Enter date in valid range',
+                      builder: (context, child) {
+                        return Theme(
+                            child: child, data: ThemeData.dark().copyWith());
+                      });
+                  if (picked != null) {
+                    setState(() {
+                      selectedDate = picked;
+                      widget.food.bestBeforeDate = picked;
+                    });
+                  }
+                },
                 child: Text(
                   "Select Date",
                   style: TextStyle(color: Color(0xFF2D3447)),
@@ -42,25 +65,18 @@ class _NewFoodBestBeforeState extends State<NewFoodBestBefore> {
         )),
         floatingActionButton: FloatingActionButton(
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => PantryScreen()));
+              print(widget.food.name);
+              print(widget.food.location);
+              print(widget.food.quantity);
+              print(widget.food.quantityType);
+              print(widget.food.bestBeforeDate);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => NewFoodReview(food: widget.food)));
             },
-            child: Icon(Icons.save, color: Color(0xFF2D3447), size: 30.0),
+            child:
+                Icon(Icons.arrow_right, color: Color(0xFF2D3447), size: 30.0),
             backgroundColor: Colors.white));
-  }
-}
-
-_selectDate(BuildContext context) async {
-  final DateTime picked = await showDatePicker(
-      context: context,
-      initialDate: DateTime.now(),
-      firstDate: DateTime.now(),
-      lastDate: DateTime(2030),
-      errorInvalidText: 'Enter date in valid range',
-      builder: (context, child) {
-        return Theme(child: child, data: ThemeData.dark().copyWith());
-      });
-  if (picked != null) {
-    selectedDate = picked;
   }
 }

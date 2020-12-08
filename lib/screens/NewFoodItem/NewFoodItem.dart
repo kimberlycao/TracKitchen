@@ -13,8 +13,8 @@ class NewFoodName extends StatefulWidget {
 class _NewFoodNameState extends State<NewFoodName> {
   @override
   Widget build(BuildContext context) {
-    TextEditingController _titleController = new TextEditingController();
-    _titleController.text = widget.food.name;
+    TextEditingController _nameController = new TextEditingController();
+    _nameController.text = widget.food.name;
     return Scaffold(
       backgroundColor: Color(0xFF2D3447),
       appBar: AppBar(
@@ -36,7 +36,7 @@ class _NewFoodNameState extends State<NewFoodName> {
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: TextField(
-                  controller: _titleController,
+                  controller: _nameController,
                   textAlign: TextAlign.center,
                   cursorColor: Colors.white,
                   decoration: InputDecoration(
@@ -51,7 +51,7 @@ class _NewFoodNameState extends State<NewFoodName> {
             ),
             RaisedButton(
                 onPressed: () {
-                  widget.food.name = _titleController.text;
+                  widget.food.name = _nameController.text;
                   Navigator.push(
                       context,
                       MaterialPageRoute(

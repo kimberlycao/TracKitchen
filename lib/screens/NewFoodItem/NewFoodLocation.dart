@@ -11,7 +11,7 @@ class NewFoodLocation extends StatefulWidget {
 }
 
 class _NewFoodLocationState extends State<NewFoodLocation> {
-  String dropdownValue = 'Pantry';
+  String dropdownLocation;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,6 +36,7 @@ class _NewFoodLocationState extends State<NewFoodLocation> {
           Center(
             child: DropdownButton<String>(
               dropdownColor: Color(0xFF2D3447),
+              value: dropdownLocation,
               hint: Text(
                 'Select location',
                 style: TextStyle(color: Colors.white),
@@ -51,14 +52,15 @@ class _NewFoodLocationState extends State<NewFoodLocation> {
               ),
               onChanged: (String newValue) {
                 setState(() {
-                  dropdownValue = newValue;
+                  dropdownLocation = newValue;
+                  widget.food.location = dropdownLocation;
                 });
               },
               items: <String>['Pantry', 'Refrigerator', 'Freezer']
-                  .map<DropdownMenuItem<String>>((String value) {
+                  .map<DropdownMenuItem<String>>((String location) {
                 return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
+                  value: location,
+                  child: Text(location),
                 );
               }).toList(),
             ),

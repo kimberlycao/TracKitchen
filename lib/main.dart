@@ -6,8 +6,11 @@ import 'package:kitchenventory/screens/Pantry.dart';
 import 'package:kitchenventory/screens/Refrigerator.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:kitchenventory/Classes/Food.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 

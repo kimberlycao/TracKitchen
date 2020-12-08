@@ -7,17 +7,17 @@ import 'dart:math';
 final List<Food> foods = [
   Food(
       name: "Broccoli",
-      quantity: 2,
+      quantity: '2',
       quantityType: QuantityType.individuals,
       bestBeforeDate: DateTime.now()),
   Food(
       name: "Broccoli",
-      quantity: 2,
+      quantity: '2',
       quantityType: QuantityType.individuals,
       bestBeforeDate: DateTime.now()),
   Food(
       name: "Broccoli",
-      quantity: 2,
+      quantity: '2',
       quantityType: QuantityType.individuals,
       bestBeforeDate: DateTime.now()),
 ];

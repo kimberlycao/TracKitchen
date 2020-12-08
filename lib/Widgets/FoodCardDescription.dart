@@ -26,7 +26,7 @@ class FoodCardDescription extends StatelessWidget {
                       overflow: TextOverflow.ellipsis),
                 ),
                 Text(
-                    '${(food.quantity).toString()} ${quantityTypeToString(food.quantityType)}',
+                    '${(food.quantity)} ${quantityTypeToString(food.quantityType)}',
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontSize: 15.0, color: Color(0xFF2D3447))),
