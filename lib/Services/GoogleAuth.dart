@@ -17,7 +17,8 @@ Future<String> signInWithGoogle() async {
     accessToken: googleSignInAuthentication.accessToken,
     idToken: googleSignInAuthentication.idToken,
   );
-  //Passes the user's credential to Firebase to authenticate with the app
+
+  /// Passes the user's credential to Firebase to authenticate with the app
   final UserCredential authResult =
       await _auth.signInWithCredential(credential);
   final User user = authResult.user;

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:kitchenventory/Components/EmailLoginForm.dart';
 import 'package:kitchenventory/Home/AppHome.dart';
+import 'package:kitchenventory/Screens/Login/SignUpForm.dart';
 import 'package:kitchenventory/Services/GoogleAuth.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -21,8 +23,9 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Container(
             child: Column(
               children: [
+                EmailLoginForm(),
                 SignInButton(
-                  Buttons.Google,
+                  Buttons.GoogleDark,
                   onPressed: () {
                     signInWithGoogle().then((result) {
                       if (result != null) {
@@ -33,7 +36,17 @@ class _LoginScreenState extends State<LoginScreen> {
                       }
                     });
                   },
-                )
+                ),
+                SignInButtonBuilder(
+                    text: 'Sign up with Email',
+                    icon: Icons.email,
+                    backgroundColor: Colors.blue,
+                    onPressed: () {
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (context) {
+                        return SignUpForm();
+                      }));
+                    })
               ],
             ),
           ),
