@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kitchenventory/Classes/Food.dart';
+import 'package:kitchenventory/Models/Food.dart';
 import 'package:intl/intl.dart';
 
 enum QuantityType { individuals, bags, boxes, bundles, bottles }

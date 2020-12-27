@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kitchenventory/Screens/NewFoodItem/NewFoodItem.dart';
-import 'package:kitchenventory/Widgets/SearchBar.dart';
-import 'package:kitchenventory/widgets/FoodList.dart';
-import 'package:kitchenventory/Classes/Food.dart';
+import 'package:kitchenventory/Components/SearchBar.dart';
+import 'package:kitchenventory/Components/FoodList.dart';
+import 'package:kitchenventory/Models/Food.dart';
 
 class PantryScreen extends StatefulWidget {
   @override

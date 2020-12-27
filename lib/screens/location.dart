@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:kitchenventory/Widgets/SearchBar.dart';
-import 'package:kitchenventory/widgets/LocationCard.dart';
+import 'package:kitchenventory/Components/SearchBar.dart';
+import 'package:kitchenventory/Components/LocationCard.dart';
 import 'package:kitchenventory/screens/Pantry.dart';
 import 'package:kitchenventory/screens/Refrigerator.dart';
 import 'package:kitchenventory/screens/Freezer.dart';

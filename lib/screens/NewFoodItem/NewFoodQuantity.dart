@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kitchenventory/Classes/Food.dart';
+import 'package:kitchenventory/Models/Food.dart';
 import 'package:kitchenventory/Screens/NewFoodItem/NewFoodBestBeforeDate.dart';
-import 'package:kitchenventory/Widgets/FoodCardDescription.dart';
+import 'package:kitchenventory/Components/FoodCardDescription.dart';
 
+//For dropdown
 const Map<String, QuantityType> quantityTypeList = {
   "Individuals": QuantityType.individuals,
   "Bags": QuantityType.bags,

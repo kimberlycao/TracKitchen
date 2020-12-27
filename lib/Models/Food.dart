@@ -1,4 +1,4 @@
-import 'package:kitchenventory/Widgets/FoodCardDescription.dart';
+import 'package:kitchenventory/Components/FoodCardDescription.dart';
 
 class Food {
   String name;
@@ -18,6 +18,7 @@ class Food {
         'name': name,
         'location': location,
         'quantity': quantity,
+        'quantityType': quantityTypeToString(quantityType),
         'purchaseDate': bestBeforeDate,
       };
 }

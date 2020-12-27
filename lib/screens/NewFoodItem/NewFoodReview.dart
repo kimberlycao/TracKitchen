@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kitchenventory/Classes/Food.dart';
+import 'package:kitchenventory/Models/Food.dart';
 import 'package:intl/intl.dart';
-import 'package:kitchenventory/Widgets/FoodCardDescription.dart';
+import 'package:kitchenventory/Components/FoodCardDescription.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class NewFoodReview extends StatelessWidget {

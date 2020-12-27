@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:kitchenventory/Classes/Food.dart';
-import 'package:kitchenventory/Widgets/FoodCard.dart';
-import 'package:kitchenventory/Widgets/FoodCardDescription.dart';
-import 'dart:math';
+import 'package:kitchenventory/Models/Food.dart';
+import 'package:kitchenventory/Components/FoodCard.dart';
+import 'package:kitchenventory/Components/FoodCardDescription.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 final List<Food> foods = [
   Food(
@@ -31,5 +31,23 @@ class FoodList extends StatelessWidget {
           itemBuilder: (BuildContext context, int index) =>
               FoodCard(food: foods[index])),
     );
+  }
+}
+
+class FoodList1 extends StatefulWidget {
+  @override
+  _FoodList1State createState() => _FoodList1State();
+}
+
+class _FoodList1State extends State<FoodList1> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(child: FutureBuilder(builder: (_, snapshot) {
+      //Check if there's a connection to Firestore.
+      if (snapshot.connectionState == ConnectionState.waiting) {
+        return Center(
+            child: Text("Loading...", style: TextStyle(color: Colors.white)));
+      }
+    }));
   }
 }
