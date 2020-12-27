@@ -22,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               children: [
                 SignInButton(
-                  Buttons.GoogleDark,
+                  Buttons.Google,
                   onPressed: () {
                     signInWithGoogle().then((result) {
                       if (result != null) {
