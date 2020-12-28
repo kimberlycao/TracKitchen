@@ -16,20 +16,12 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF2D3447),
-      appBar: AppBar(
-        title: Text('Welcome You Chef',
-            style: GoogleFonts.breeSerif(
-                color: Colors.white,
-                fontSize: 25.0,
-                fontWeight: FontWeight.w100)),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-      ),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Center(
           child: Column(
             children: [
+              Image(image: AssetImage('assets/images/Logo.png')),
               EmailLoginForm(),
               RaisedButton(
                   onPressed: () {
