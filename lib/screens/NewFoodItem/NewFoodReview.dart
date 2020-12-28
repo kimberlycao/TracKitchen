@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kitchenventory/Models/Food.dart';
@@ -9,6 +10,7 @@ class NewFoodReview extends StatelessWidget {
   final Food food;
   NewFoodReview({this.food}) : super();
   final db = FirebaseFirestore.instance;
+  final currentUID = FirebaseAuth.instance.currentUser.uid.toString();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +40,11 @@ class NewFoodReview extends StatelessWidget {
         )),
         floatingActionButton: FloatingActionButton(
             onPressed: () async {
-              await db.collection('foods').add(food.toJson());
+              await db
+                  .collection('Users')
+                  .doc(currentUID)
+                  .collection('Foods')
+                  .add(food.toJson());
               Navigator.of(context).popUntil((route) => route.isFirst);
             },
             child: Icon(Icons.save, color: Color(0xFF2D3447), size: 30.0),

@@ -160,13 +160,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_signin_button:
-    dependency: "direct main"
-    description:
-      name: flutter_signin_button
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -178,7 +171,7 @@ packages:
     source: sdk
     version: "0.0.0"
   font_awesome_flutter:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: font_awesome_flutter
       url: "https://pub.dartlang.org"

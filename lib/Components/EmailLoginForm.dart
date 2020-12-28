@@ -25,6 +25,7 @@ class _EmailLoginFormState extends State<EmailLoginForm> {
         children: <Widget>[
           TextFormField(
             controller: _emailController,
+            style: TextStyle(color: Colors.white),
             decoration: const InputDecoration(labelText: 'Email'),
             validator: (String value) {
               if (value.isEmpty) {
@@ -81,7 +82,8 @@ class _EmailLoginFormState extends State<EmailLoginForm> {
 
     if (user != null) {
       setState(() {
-        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+        Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context) {
           return AppHome();
         }));
         _success = true;

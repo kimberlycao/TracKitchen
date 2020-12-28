@@ -19,7 +19,22 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Kitchenventory',
-        theme: ThemeData(fontFamily: 'BreeSerif'),
+        theme: ThemeData(
+          primaryColor: Color(0xFF2D3447),
+          fontFamily: 'BreeSerif',
+          inputDecorationTheme: InputDecorationTheme(
+            focusedBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.white)),
+            enabledBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: Colors.white),
+            ),
+            border: UnderlineInputBorder(
+              borderSide: BorderSide(color: Colors.white),
+            ),
+            labelStyle: TextStyle(color: Colors.white),
+            hintStyle: TextStyle(color: Colors.white),
+          ),
+        ),
         home: LoginScreen());
   }
 }

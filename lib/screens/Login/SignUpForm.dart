@@ -14,14 +14,22 @@ class _SignUpFormState extends State<SignUpForm> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   /// Tracks changes in textfield
+  final TextEditingController _firstNameController = TextEditingController();
+  final TextEditingController _lastNameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  String displayName;
   bool _success;
   String _userEmail;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Sign Up')),
+      backgroundColor: Color(0xFF2D3447),
+      appBar: AppBar(
+        title: Text('Sign Up'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
       body: Form(
         key: _formKey,
         child: Padding(
@@ -29,6 +37,26 @@ class _SignUpFormState extends State<SignUpForm> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              TextFormField(
+                controller: _firstNameController,
+                decoration: const InputDecoration(labelText: 'First Name'),
+                validator: (String value) {
+                  if (value.isEmpty) {
+                    return 'Please enter some text';
+                  }
+                  return null;
+                },
+              ),
+              TextFormField(
+                controller: _lastNameController,
+                decoration: const InputDecoration(labelText: 'Last Name'),
+                validator: (String value) {
+                  if (value.isEmpty) {
+                    return 'Please enter some text';
+                  }
+                  return null;
+                },
+              ),
               TextFormField(
                 controller: _emailController,
                 decoration: const InputDecoration(labelText: 'Email'),
@@ -84,7 +112,9 @@ class _SignUpFormState extends State<SignUpForm> {
         .user;
     if (user != null) {
       setState(() {
-        userSetup(user.displayName);
+        displayName =
+            _firstNameController.text + ' ' + _lastNameController.text;
+        emailUserSetup(displayName, _emailController.text);
         _success = true;
         _userEmail = user.email;
       });
