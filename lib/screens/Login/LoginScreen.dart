@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:kitchenventory/Components/EmailLoginForm.dart';
 import 'package:kitchenventory/Home/AppHome.dart';
 import 'package:kitchenventory/Screens/Login/SignUpForm.dart';
@@ -16,7 +17,11 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       backgroundColor: Color(0xFF2D3447),
       appBar: AppBar(
-        title: Text('Welcome You Chef'),
+        title: Text('Welcome You Chef',
+            style: GoogleFonts.breeSerif(
+                color: Colors.white,
+                fontSize: 25.0,
+                fontWeight: FontWeight.w100)),
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
@@ -30,8 +35,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   onPressed: () {
                     signInWithGoogle().then((result) {
                       if (result != null) {
-                        Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (context) {
+                        Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(builder: (context) {
                           return AppHome();
                         }));
                       }

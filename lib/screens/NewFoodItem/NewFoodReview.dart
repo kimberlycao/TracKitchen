@@ -1,16 +1,16 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kitchenventory/Home/AppHome.dart';
 import 'package:kitchenventory/Models/Food.dart';
 import 'package:intl/intl.dart';
 import 'package:kitchenventory/Components/FoodCardDescription.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:kitchenventory/Services/GetCurrentUID.dart';
 
 class NewFoodReview extends StatelessWidget {
   final Food food;
   NewFoodReview({this.food}) : super();
   final db = FirebaseFirestore.instance;
-  final currentUID = FirebaseAuth.instance.currentUser.uid.toString();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,15 +39,34 @@ class NewFoodReview extends StatelessWidget {
           ]),
         )),
         floatingActionButton: FloatingActionButton(
-            onPressed: () async {
+          child: Icon(Icons.save, color: Color(0xFF2D3447), size: 30.0),
+          backgroundColor: Colors.white,
+          onPressed: () async {
+            final uid = await getCurrentUID();
+            if (food.location == 'Pantry') {
               await db
                   .collection('Users')
-                  .doc(currentUID)
-                  .collection('Foods')
+                  .doc(uid)
+                  .collection('Pantry Foods')
                   .add(food.toJson());
-              Navigator.of(context).popUntil((route) => route.isFirst);
-            },
-            child: Icon(Icons.save, color: Color(0xFF2D3447), size: 30.0),
-            backgroundColor: Colors.white));
+            } else if (food.location == 'Refrigerator') {
+              await db
+                  .collection('Users')
+                  .doc(uid)
+                  .collection('Refrigerator Foods')
+                  .add(food.toJson());
+            } else if (food.location == 'Freezer') {
+              await db
+                  .collection('Users')
+                  .doc(uid)
+                  .collection('Freezer Foods')
+                  .add(food.toJson());
+            }
+            Navigator.of(context)
+                .pushReplacement((MaterialPageRoute(builder: (context) {
+              return AppHome();
+            })));
+          },
+        ));
   }
 }

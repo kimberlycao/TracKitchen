@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kitchenventory/Components/FoodLists/FreezerFoodList.dart';
 import 'package:kitchenventory/Components/SearchBar.dart';
 
 class FreezerScreen extends StatefulWidget {
@@ -26,6 +27,8 @@ class _FreezerScreenState extends State<FreezerScreen> {
           children: [
             SizedBox(height: screenHeight * 0.02),
             SearchBar(),
+            SizedBox(height: screenHeight * 0.02),
+            Expanded(child: Container(child: FreezerFoodList())),
           ],
         ),
       ),

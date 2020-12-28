@@ -5,12 +5,12 @@ import 'package:kitchenventory/Components/FoodCardDescription.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:kitchenventory/Services/GetCurrentUID.dart';
 
-class FoodList extends StatelessWidget {
+class PantryFoodList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       child: StreamBuilder(
-          stream: getUserRefrigeratorFoodsStream(context),
+          stream: getUserPantryFoodsStream(context),
           builder: (context, snapshot) {
             if (!snapshot.hasData) return const Text('No food items');
             return new ListView.builder(
@@ -22,8 +22,7 @@ class FoodList extends StatelessWidget {
   }
 }
 
-Stream<QuerySnapshot> getUserRefrigeratorFoodsStream(
-    BuildContext context) async* {
+Stream<QuerySnapshot> getUserPantryFoodsStream(BuildContext context) async* {
   final uid = await getCurrentUID();
   yield* FirebaseFirestore.instance
       .collection('Users')

@@ -1,3 +1,4 @@
+import 'package:intl/intl.dart';
 import 'package:kitchenventory/Components/FoodCardDescription.dart';
 
 class Food {
@@ -19,6 +20,7 @@ class Food {
         'location': location,
         'quantity': quantity,
         'quantityType': quantityTypeToString(quantityType),
-        'purchaseDate': bestBeforeDate,
+        'bestBeforeDate':
+            DateFormat('MM/dd/yyyy').format(bestBeforeDate).toString(),
       };
 }

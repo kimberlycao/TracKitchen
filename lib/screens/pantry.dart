@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kitchenventory/Components/FoodLists/PantryFoodList.dart';
 import 'package:kitchenventory/Screens/NewFoodItem/NewFoodItem.dart';
 import 'package:kitchenventory/Components/SearchBar.dart';
-import 'package:kitchenventory/Components/FoodList.dart';
 import 'package:kitchenventory/Models/Food.dart';
 
 class PantryScreen extends StatefulWidget {
@@ -32,13 +32,13 @@ class _PantryScreenState extends State<PantryScreen> {
               SizedBox(height: screenHeight * 0.02),
               SearchBar(),
               SizedBox(height: screenHeight * 0.02),
-              Expanded(child: Container(child: FoodList())),
+              Expanded(child: Container(child: PantryFoodList())),
             ],
           ),
         ),
         floatingActionButton: FloatingActionButton(
             onPressed: () {
-              Navigator.push(
+              Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                       builder: (context) => NewFoodName(food: newFood)));
