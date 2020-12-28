@@ -14,6 +14,7 @@ class FreezerFoodList extends StatelessWidget {
           builder: (context, snapshot) {
             if (!snapshot.hasData) return const Text('No food items');
             return new ListView.builder(
+                shrinkWrap: false,
                 itemCount: snapshot.data.documents.length,
                 itemBuilder: (BuildContext context, int index) =>
                     FoodCard(food: snapshot.data.documents[index]));

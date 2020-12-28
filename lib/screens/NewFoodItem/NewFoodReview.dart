@@ -17,9 +17,9 @@ class NewFoodReview extends StatelessWidget {
         backgroundColor: Color(0xFF2D3447),
         appBar: AppBar(
             title: Text("Add Food Item",
-                style: GoogleFonts.breeSerif(
+                style: TextStyle(
                     color: Colors.white,
-                    fontSize: 30.0,
+                    fontSize: 25.0,
                     fontWeight: FontWeight.w100)),
             backgroundColor: Colors.transparent,
             elevation: 0),

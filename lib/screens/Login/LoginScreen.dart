@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:kitchenventory/Components/EmailLoginForm.dart';
 import 'package:kitchenventory/Home/AppHome.dart';
 import 'package:kitchenventory/Screens/Login/SignUpForm.dart';
@@ -21,7 +20,10 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Center(
           child: Column(
             children: [
-              Image(image: AssetImage('assets/images/Logo.png')),
+              Padding(
+                padding: const EdgeInsets.only(top: 15.0),
+                child: Image(image: AssetImage('assets/images/Logo.png')),
+              ),
               EmailLoginForm(),
               RaisedButton(
                   onPressed: () {

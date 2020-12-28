@@ -17,20 +17,17 @@ class FoodCardDescription extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 5.0),
-                  child: Text(food['name'],
-                      style:
-                          TextStyle(fontSize: 22.0, color: Color(0xFF2D3447)),
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis),
-                ),
+                Text(food['name'],
+                    style: TextStyle(fontSize: 18.0, color: Color(0xFF2D3447)),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis),
                 Text('${(food['quantity'])} ${(food['quantityType'])}',
-                    maxLines: 2,
+                    maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontSize: 15.0, color: Color(0xFF2D3447))),
-                Text('${'Best before:'} ${food['bestBeforeDate']}',
-                    maxLines: 2,
+                Text(
+                    '${'Best before:'} ${DateFormat('MM/dd/yyyy').format((food['bestBeforeDate']).toDate()).toString()}',
+                    maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontSize: 15.0, color: Color(0xFF2D3447))),
               ],

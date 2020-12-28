@@ -20,7 +20,6 @@ class Food {
         'location': location,
         'quantity': quantity,
         'quantityType': quantityTypeToString(quantityType),
-        'bestBeforeDate':
-            DateFormat('MM/dd/yyyy').format(bestBeforeDate).toString(),
+        'bestBeforeDate': bestBeforeDate,
       };
 }
