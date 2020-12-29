@@ -12,7 +12,7 @@ class PantryFoodList extends StatelessWidget {
       child: StreamBuilder(
           stream: getUserPantryFoodsStream(context),
           builder: (context, snapshot) {
-            if (!snapshot.hasData) return const Text('No food items');
+            if (!snapshot.hasData) return const Text('');
             return new ListView.builder(
                 shrinkWrap: false,
                 itemCount: snapshot.data.documents.length,

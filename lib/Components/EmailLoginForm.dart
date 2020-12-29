@@ -36,6 +36,7 @@ class _EmailLoginFormState extends State<EmailLoginForm> {
           ),
           TextFormField(
             controller: _passwordController,
+            style: TextStyle(color: Colors.white),
             decoration: const InputDecoration(labelText: 'Password'),
             validator: (String value) {
               if (value.isEmpty) {
@@ -73,7 +74,7 @@ class _EmailLoginFormState extends State<EmailLoginForm> {
     );
   }
 
-  void _signInWithEmailAndPassword() async {
+  Future _signInWithEmailAndPassword() async {
     final User user = (await _auth.signInWithEmailAndPassword(
       email: _emailController.text.trim(),
       password: _passwordController.text,
@@ -88,6 +89,7 @@ class _EmailLoginFormState extends State<EmailLoginForm> {
         }));
         _success = true;
         _userEmail = user.email;
+        print('$user');
       });
     } else {
       setState(() {

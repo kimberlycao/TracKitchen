@@ -1,3 +1,3 @@
 # Kitchenventory
 
-What the fridge do I have in my kitchen?
+An inventory app to help users keep track of the foods in their kitchen.

@@ -12,7 +12,7 @@ class FreezerFoodList extends StatelessWidget {
       child: StreamBuilder(
           stream: getUserFreezerFoodsStream(context),
           builder: (context, snapshot) {
-            if (!snapshot.hasData) return const Text('No food items');
+            if (!snapshot.hasData) return const Text('');
             return new ListView.builder(
                 shrinkWrap: false,
                 itemCount: snapshot.data.documents.length,

@@ -39,6 +39,7 @@ class _SignUpFormState extends State<SignUpForm> {
             children: <Widget>[
               TextFormField(
                 controller: _firstNameController,
+                style: TextStyle(color: Colors.white),
                 decoration: const InputDecoration(labelText: 'First Name'),
                 validator: (String value) {
                   if (value.isEmpty) {
@@ -49,6 +50,7 @@ class _SignUpFormState extends State<SignUpForm> {
               ),
               TextFormField(
                 controller: _lastNameController,
+                style: TextStyle(color: Colors.white),
                 decoration: const InputDecoration(labelText: 'Last Name'),
                 validator: (String value) {
                   if (value.isEmpty) {
@@ -59,6 +61,7 @@ class _SignUpFormState extends State<SignUpForm> {
               ),
               TextFormField(
                 controller: _emailController,
+                style: TextStyle(color: Colors.white),
                 decoration: const InputDecoration(labelText: 'Email'),
                 validator: (String value) {
                   if (value.isEmpty) {
@@ -69,6 +72,7 @@ class _SignUpFormState extends State<SignUpForm> {
               ),
               TextFormField(
                 controller: _passwordController,
+                style: TextStyle(color: Colors.white),
                 decoration: const InputDecoration(labelText: 'Password'),
                 validator: (String value) {
                   if (value.isEmpty) {
@@ -112,9 +116,12 @@ class _SignUpFormState extends State<SignUpForm> {
         .user;
     if (user != null) {
       setState(() {
-        displayName =
-            _firstNameController.text + ' ' + _lastNameController.text;
-        emailUserSetup(displayName, _emailController.text);
+        FirebaseAuth.instance.currentUser.updateProfile(
+            displayName: _firstNameController.text + _lastNameController.text,
+            photoURL:
+                'https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png');
+        emailUserSetup(FirebaseAuth.instance.currentUser.displayName,
+            _emailController.text);
         _success = true;
         _userEmail = user.email;
       });

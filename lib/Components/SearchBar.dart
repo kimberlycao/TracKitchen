@@ -11,7 +11,7 @@ class _SearchBarState extends State<SearchBar> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10.0),
       child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
+          padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 2.0),
           decoration: BoxDecoration(
               color: Colors.white, borderRadius: BorderRadius.circular(30.0)),
           child: TextField(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:kitchenventory/Components/FoodNameTextField.dart';
 import 'package:kitchenventory/Components/FoodQuantityTextField.dart';
+import 'package:kitchenventory/Home/AppHome.dart';
 import 'package:kitchenventory/Services/GetCurrentUID.dart';
 
 class FoodDetails extends StatefulWidget {
@@ -57,22 +58,43 @@ class _FoodDetailsState extends State<FoodDetails> {
               ),
               FoodQuantityTextField(quantityController: _quantityController),
               Divider(),
-              Container(
-                padding: const EdgeInsets.all(16.0),
-                alignment: Alignment.center,
-                child: RaisedButton(
-                  onPressed: () async {
-                    final uid = await getCurrentUID();
-                    db
-                        .collection('Users')
-                        .doc(uid)
-                        .collection(widget.food['location'])
-                        .doc(widget.food.id)
-                        .update({'quantity': _quantityController.text});
-                    Navigator.of(context).pop();
-                  },
-                  child: const Text('Save'),
-                ),
+              Column(
+                children: [
+                  RaisedButton(
+                    onPressed: () async {
+                      final uid = await getCurrentUID();
+                      db
+                          .collection('Users')
+                          .doc(uid)
+                          .collection(widget.food['location'])
+                          .doc(widget.food.id)
+                          .update({'quantity': _quantityController.text});
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (context) {
+                        return AppHome();
+                      }));
+                    },
+                    child: const Text('Save'),
+                  ),
+                  RaisedButton(
+                    color: Colors.red,
+                    textColor: Colors.white,
+                    onPressed: () async {
+                      final uid = await getCurrentUID();
+                      db
+                          .collection('Users')
+                          .doc(uid)
+                          .collection(widget.food['location'])
+                          .doc(widget.food.id)
+                          .delete();
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (context) {
+                        return AppHome();
+                      }));
+                    },
+                    child: const Text('Delete'),
+                  ),
+                ],
               ),
             ]),
           ),
