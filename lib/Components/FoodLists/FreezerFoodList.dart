@@ -28,6 +28,6 @@ Stream<QuerySnapshot> getUserFreezerFoodsStream(BuildContext context) async* {
   yield* FirebaseFirestore.instance
       .collection('Users')
       .doc(uid)
-      .collection('Freezer Foods')
+      .collection('Freezer')
       .snapshots();
 }

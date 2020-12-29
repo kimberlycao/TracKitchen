@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:kitchenventory/Components/FoodNameTextField.dart';
 import 'package:kitchenventory/Models/Food.dart';
 import 'package:kitchenventory/Screens/NewFoodItem/NewFoodLocation.dart';
 
@@ -35,19 +35,7 @@ class _NewFoodNameState extends State<NewFoodName> {
                 style: TextStyle(fontSize: 25.0, color: Colors.white)),
             Padding(
               padding: const EdgeInsets.all(20.0),
-              child: TextField(
-                  controller: _nameController,
-                  textAlign: TextAlign.center,
-                  cursorColor: Colors.white,
-                  decoration: InputDecoration(
-                      hintText: "Mushrooms, Chicken,...",
-                      hintStyle: TextStyle(
-                          fontStyle: FontStyle.italic,
-                          color: Colors.white30,
-                          fontSize: 20.0),
-                      focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white))),
-                  style: TextStyle(color: Colors.white, fontSize: 20.0)),
+              child: FoodNameTextField(nameController: _nameController),
             ),
             RaisedButton(
                 onPressed: () {

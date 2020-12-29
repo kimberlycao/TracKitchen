@@ -1,9 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:kitchenventory/Models/Food.dart';
 import 'package:kitchenventory/Components/FoodCardDescription.dart';
 import 'package:kitchenventory/Screens/FoodDetails.dart';
-import 'package:kitchenventory/screens/Location.dart';
 
 class FoodCard extends StatelessWidget {
   final DocumentSnapshot food;

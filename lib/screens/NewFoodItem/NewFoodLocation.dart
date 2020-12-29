@@ -45,7 +45,7 @@ class _NewFoodLocationState extends State<NewFoodLocation> {
               iconSize: 25,
               elevation: 16,
               style: TextStyle(
-                  color: Colors.white, fontSize: 25.0, fontFamily: 'BreeSerif'),
+                  color: Colors.white, fontSize: 20.0, fontFamily: 'BreeSerif'),
               underline: Container(
                 height: 2,
                 color: Colors.white,

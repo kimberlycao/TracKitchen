@@ -38,7 +38,7 @@ class _PantryScreenState extends State<PantryScreen> {
         ),
         floatingActionButton: FloatingActionButton(
             onPressed: () {
-              Navigator.pushReplacement(
+              Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) => NewFoodName(food: newFood)));

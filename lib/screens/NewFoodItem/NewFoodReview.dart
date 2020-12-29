@@ -47,19 +47,19 @@ class NewFoodReview extends StatelessWidget {
               await db
                   .collection('Users')
                   .doc(uid)
-                  .collection('Pantry Foods')
+                  .collection('Pantry')
                   .add(food.toJson());
             } else if (food.location == 'Refrigerator') {
               await db
                   .collection('Users')
                   .doc(uid)
-                  .collection('Refrigerator Foods')
+                  .collection('Refrigerator')
                   .add(food.toJson());
             } else if (food.location == 'Freezer') {
               await db
                   .collection('Users')
                   .doc(uid)
-                  .collection('Freezer Foods')
+                  .collection('Freezer')
                   .add(food.toJson());
             }
             Navigator.of(context)

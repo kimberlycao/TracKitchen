@@ -29,6 +29,6 @@ Stream<QuerySnapshot> getUserRefrigeratorFoodsStream(
   yield* FirebaseFirestore.instance
       .collection('Users')
       .doc(uid)
-      .collection('Refrigerator Foods')
+      .collection('Refrigerator')
       .snapshots();
 }

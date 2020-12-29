@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kitchenventory/Components/FoodQuantityTextField.dart';
 import 'package:kitchenventory/Models/Food.dart';
 import 'package:kitchenventory/Screens/NewFoodItem/NewFoodBestBeforeDate.dart';
 import 'package:kitchenventory/Components/FoodCardDescription.dart';
@@ -47,24 +48,7 @@ class _NewFoodQuantityState extends State<NewFoodQuantity> {
             SizedBox(
               height: 20.0,
             ),
-            TextFormField(
-              inputFormatters: <TextInputFormatter>[
-                WhitelistingTextInputFormatter.digitsOnly,
-              ],
-              controller: _quantityController,
-              keyboardType: TextInputType.number,
-              textAlign: TextAlign.center,
-              cursorColor: Colors.white,
-              decoration: InputDecoration(
-                  hintText: "Enter quantity",
-                  hintStyle: TextStyle(
-                      fontStyle: FontStyle.italic,
-                      color: Colors.white30,
-                      fontSize: 20.0),
-                  focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white))),
-              style: TextStyle(color: Colors.white, fontSize: 20.0),
-            ),
+            FoodQuantityTextField(quantityController: _quantityController),
             Padding(
               padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
               child: DropdownButton<QuantityType>(
