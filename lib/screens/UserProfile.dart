@@ -9,6 +9,7 @@ class UserProfile extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xFF2D3447),
       appBar: AppBar(
+          centerTitle: true,
           title: Text("Profile",
               style: TextStyle(
                   color: Colors.white,
@@ -28,7 +29,7 @@ class UserProfile extends StatelessWidget {
                       return Column(
                         children: [
                           CircleAvatar(
-                            radius: 30.0,
+                            radius: 35.0,
                             backgroundImage:
                                 NetworkImage('${snapshot.data.photoURL}'),
                             backgroundColor: Colors.transparent,

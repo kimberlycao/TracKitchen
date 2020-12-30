@@ -18,7 +18,10 @@ class FoodCardDescription extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(food['name'],
-                    style: TextStyle(fontSize: 18.0, color: Color(0xFF2D3447)),
+                    style: TextStyle(
+                        fontSize: 15.0,
+                        color: Color(0xFF2D3447),
+                        fontWeight: FontWeight.bold),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis),
                 Text('${(food['quantity'])} ${(food['quantityType'])}',
@@ -30,10 +33,18 @@ class FoodCardDescription extends StatelessWidget {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontSize: 15.0, color: Color(0xFF2D3447))),
+                Text('${'Use in:'} ${daysUntilExpiration()} ${'days'}',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(fontSize: 15.0, color: Color(0xFF2D3447))),
               ],
             ))
       ],
     );
+  }
+
+  int daysUntilExpiration() {
+    return (food['bestBeforeDate'].toDate()).difference(DateTime.now()).inDays;
   }
 }
 

@@ -74,6 +74,9 @@ flutter:
     - family: BreeSerif
       fonts:
         - asset: assets/fonts/BreeSerif-Regular.ttf
+    - family: Sansita
+      fonts:
+        - asset: assets/fonts/Sansita-Regular.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

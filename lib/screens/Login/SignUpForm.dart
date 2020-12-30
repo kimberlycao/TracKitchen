@@ -120,7 +120,7 @@ class _SignUpFormState extends State<SignUpForm> {
             displayName: _firstNameController.text + _lastNameController.text,
             photoURL:
                 'https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png');
-        emailUserSetup(FirebaseAuth.instance.currentUser.displayName,
+        emailUserSetup(_firstNameController.text + _lastNameController.text,
             _emailController.text);
         _success = true;
         _userEmail = user.email;

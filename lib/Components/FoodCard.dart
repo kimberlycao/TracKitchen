@@ -8,13 +8,13 @@ class FoodCard extends StatelessWidget {
   const FoodCard({this.food}) : super();
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
     return new Padding(
         padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
         child: Card(
+          color: daysUntilExpiration() < 0 ? Colors.red[200] : Colors.white,
           child: InkWell(
             child: Container(
-                height: screenHeight * 0.1,
+                height: 90,
                 child: Padding(
                   padding: const EdgeInsets.all(5),
                   child: Row(
@@ -31,10 +31,9 @@ class FoodCard extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Expanded(
-                          child: Padding(
-                              padding: const EdgeInsets.only(left: 30.0),
-                              child: FoodCardDescription(food: food)))
+                      Padding(
+                          padding: const EdgeInsets.only(left: 30.0),
+                          child: FoodCardDescription(food: food))
                     ],
                   ),
                 )),
@@ -49,4 +48,7 @@ class FoodCard extends StatelessWidget {
           ),
         ));
   }
+
+  int daysUntilExpiration() =>
+      (food['bestBeforeDate'].toDate()).difference(DateTime.now()).inDays;
 }

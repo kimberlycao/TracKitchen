@@ -43,7 +43,7 @@ class _NewFoodBestBeforeState extends State<NewFoodBestBefore> {
                   final DateTime picked = await showDatePicker(
                       context: context,
                       initialDate: DateTime.now(),
-                      firstDate: DateTime.now(),
+                      firstDate: DateTime(2019),
                       lastDate: DateTime(2030),
                       errorInvalidText: 'Enter date in valid range',
                       builder: (context, child) {

@@ -21,7 +21,7 @@ class _MyAppState extends State<MyApp> {
         title: 'Kitchenventory',
         theme: ThemeData(
           primaryColor: Color(0xFF2D3447),
-          fontFamily: 'BreeSerif',
+          fontFamily: 'Sansita',
           inputDecorationTheme: InputDecorationTheme(
             focusedBorder: UnderlineInputBorder(
                 borderSide: BorderSide(color: Colors.white)),
