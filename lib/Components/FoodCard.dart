@@ -11,7 +11,7 @@ class FoodCard extends StatelessWidget {
     return new Padding(
         padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
         child: Card(
-          color: daysUntilExpiration() < 0 ? Colors.red[200] : Colors.white,
+          color: daysUntilExpiration(food) < 0 ? Colors.red[200] : Colors.white,
           child: InkWell(
             child: Container(
                 height: 90,
@@ -48,7 +48,4 @@ class FoodCard extends StatelessWidget {
           ),
         ));
   }
-
-  int daysUntilExpiration() =>
-      (food['bestBeforeDate'].toDate()).difference(DateTime.now()).inDays;
 }

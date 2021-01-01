@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kitchenventory/Screens/Login/LoginScreen.dart';
-import 'package:kitchenventory/Services/GetCurrentUID.dart';
-import 'package:kitchenventory/Services/GoogleAuth.dart';
+import 'package:kitchenventory/Services/FirebaseUtils.dart';
+import 'package:kitchenventory/Services/AuthUtils.dart';
 
 class UserProfile extends StatelessWidget {
   @override

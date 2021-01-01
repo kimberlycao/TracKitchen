@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kitchenventory/Components/EmailLoginForm.dart';
 import 'package:kitchenventory/Home/AppHome.dart';
 import 'package:kitchenventory/Screens/Login/SignUpForm.dart';
-import 'package:kitchenventory/Services/GoogleAuth.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:kitchenventory/Services/AuthUtils.dart';
 
 class LoginScreen extends StatefulWidget {
   @override

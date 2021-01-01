@@ -3,7 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:kitchenventory/Components/FoodNameTextField.dart';
 import 'package:kitchenventory/Components/FoodQuantityTextField.dart';
 import 'package:kitchenventory/Home/AppHome.dart';
-import 'package:kitchenventory/Services/GetCurrentUID.dart';
+import 'package:kitchenventory/Services/FirebaseUtils.dart';
 
 class FoodDetails extends StatefulWidget {
   final DocumentSnapshot food;
@@ -69,8 +69,8 @@ class _FoodDetailsState extends State<FoodDetails> {
                           .collection(widget.food['location'])
                           .doc(widget.food.id)
                           .update({'quantity': _quantityController.text});
-                      Navigator.of(context)
-                          .push(MaterialPageRoute(builder: (context) {
+                      Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (context) {
                         return AppHome();
                       }));
                     },
@@ -87,8 +87,8 @@ class _FoodDetailsState extends State<FoodDetails> {
                           .collection(widget.food['location'])
                           .doc(widget.food.id)
                           .delete();
-                      Navigator.of(context)
-                          .push(MaterialPageRoute(builder: (context) {
+                      Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (context) {
                         return AppHome();
                       }));
                     },

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kitchenventory/Components/FoodNameTextField.dart';
 import 'package:kitchenventory/Models/Food.dart';
 import 'package:kitchenventory/Screens/NewFoodItem/NewFoodLocation.dart';
+import 'package:dio/dio.dart';
 
 class NewFoodName extends StatefulWidget {
   final Food food;

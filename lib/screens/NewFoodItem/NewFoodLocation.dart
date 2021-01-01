@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:kitchenventory/Models/Food.dart';
 import 'package:kitchenventory/Screens/NewFoodItem/NewFoodQuantity.dart';
 

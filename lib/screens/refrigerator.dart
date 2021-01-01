@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kitchenventory/Components/FoodLists/RefrigeratorFoodList.dart';
+import 'package:kitchenventory/Components/FoodList.dart';
 import 'package:kitchenventory/Components/SearchBar.dart';
+import 'package:kitchenventory/Services/APIUtils.dart';
 
 class RefrigeratorScreen extends StatefulWidget {
   @override
@@ -27,7 +28,8 @@ class _RefrigeratorScreenState extends State<RefrigeratorScreen> {
             SizedBox(height: screenHeight * 0.02),
             SearchBar(),
             SizedBox(height: screenHeight * 0.02),
-            Expanded(child: Container(child: RefrigeratorFoodList())),
+            Expanded(
+                child: Container(child: FoodList(REFRIGERATOR_LOCATION_ID))),
           ],
         ),
       ),

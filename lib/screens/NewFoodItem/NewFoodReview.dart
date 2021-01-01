@@ -4,7 +4,7 @@ import 'package:kitchenventory/Models/Food.dart';
 import 'package:intl/intl.dart';
 import 'package:kitchenventory/Components/FoodCardDescription.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:kitchenventory/Services/GetCurrentUID.dart';
+import 'package:kitchenventory/Services/FirebaseUtils.dart';
 
 class NewFoodReview extends StatelessWidget {
   final Food food;
@@ -42,25 +42,11 @@ class NewFoodReview extends StatelessWidget {
           backgroundColor: Colors.white,
           onPressed: () async {
             final uid = await getCurrentUID();
-            if (food.location == 'Pantry') {
-              await db
-                  .collection('Users')
-                  .doc(uid)
-                  .collection('Pantry')
-                  .add(food.toJson());
-            } else if (food.location == 'Refrigerator') {
-              await db
-                  .collection('Users')
-                  .doc(uid)
-                  .collection('Refrigerator')
-                  .add(food.toJson());
-            } else if (food.location == 'Freezer') {
-              await db
-                  .collection('Users')
-                  .doc(uid)
-                  .collection('Freezer')
-                  .add(food.toJson());
-            }
+            await db
+                .collection('Users')
+                .doc(uid)
+                .collection('Food')
+                .add(food.toJson());
             Navigator.of(context)
                 .pushReplacement((MaterialPageRoute(builder: (context) {
               return AppHome();

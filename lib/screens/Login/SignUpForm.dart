@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:kitchenventory/Services/UserSetup.dart';
+import 'package:kitchenventory/Services/AuthUtils.dart';
 
 class SignUpForm extends StatefulWidget {
   @override

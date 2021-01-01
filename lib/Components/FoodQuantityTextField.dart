@@ -14,7 +14,7 @@ class FoodQuantityTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       inputFormatters: <TextInputFormatter>[
-        WhitelistingTextInputFormatter.digitsOnly,
+        FilteringTextInputFormatter.digitsOnly,
       ],
       controller: _quantityController,
       keyboardType: TextInputType.number,

@@ -8,6 +8,7 @@ class SearchBar extends StatefulWidget {
 class _SearchBarState extends State<SearchBar> {
   @override
   Widget build(BuildContext context) {
+    TextEditingController _searchController = TextEditingController();
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15.0),
       child: Container(
@@ -15,8 +16,10 @@ class _SearchBarState extends State<SearchBar> {
           decoration: BoxDecoration(
               color: Colors.white, borderRadius: BorderRadius.circular(40.0)),
           child: TextField(
+              controller: _searchController,
               decoration: InputDecoration(
                   enabledBorder: InputBorder.none,
+                  focusedBorder: InputBorder.none,
                   hintText: "Search",
                   hintStyle: TextStyle(fontSize: 20.0),
                   icon: Icon(Icons.search),

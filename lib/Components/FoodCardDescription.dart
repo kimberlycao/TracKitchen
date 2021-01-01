@@ -33,7 +33,7 @@ class FoodCardDescription extends StatelessWidget {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontSize: 15.0, color: Color(0xFF2D3447))),
-                Text('${'Use in:'} ${daysUntilExpiration()} ${'days'}',
+                Text('${'Use in:'} ${daysUntilExpiration(food)} ${'days'}',
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontSize: 15.0, color: Color(0xFF2D3447))),
@@ -42,10 +42,11 @@ class FoodCardDescription extends StatelessWidget {
       ],
     );
   }
+}
 
-  int daysUntilExpiration() {
-    return (food['bestBeforeDate'].toDate()).difference(DateTime.now()).inDays;
-  }
+int daysUntilExpiration(DocumentSnapshot food) {
+  return (food['bestBeforeDate'].toDate()).difference(DateTime.now()).inDays +
+      1;
 }
 
 // ignore: missing_return
