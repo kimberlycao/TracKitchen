@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kitchenventory/Models/Food.dart';
-import 'package:kitchenventory/Screens/NewFoodItem/NewFoodReview.dart';
+import 'package:TracKit/Models/Food.dart';
+import 'package:TracKit/Screens/NewFoodItem/NewFoodReview.dart';
 
 class NewFoodBestBefore extends StatefulWidget {
   final Food food;

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:kitchenventory/Components/FoodNameTextField.dart';
-import 'package:kitchenventory/Components/FoodQuantityTextField.dart';
-import 'package:kitchenventory/Home/AppHome.dart';
-import 'package:kitchenventory/Services/FirebaseUtils.dart';
+import 'package:TracKit/Components/FoodNameTextField.dart';
+import 'package:TracKit/Components/FoodQuantityTextField.dart';
+import 'package:TracKit/Home/AppHome.dart';
+import 'package:TracKit/Services/FirebaseUtils.dart';
 
 class FoodDetails extends StatefulWidget {
   final DocumentSnapshot food;

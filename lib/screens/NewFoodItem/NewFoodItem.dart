@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kitchenventory/Components/FoodNameTextField.dart';
-import 'package:kitchenventory/Models/Food.dart';
-import 'package:kitchenventory/Screens/NewFoodItem/NewFoodLocation.dart';
-import 'package:dio/dio.dart';
+import 'package:TracKit/Components/FoodNameTextField.dart';
+import 'package:TracKit/Models/Food.dart';
+import 'package:TracKit/Screens/NewFoodItem/NewFoodLocation.dart';
 
 class NewFoodName extends StatefulWidget {
   final Food food;
@@ -15,7 +14,6 @@ class _NewFoodNameState extends State<NewFoodName> {
   @override
   Widget build(BuildContext context) {
     TextEditingController _nameController = new TextEditingController();
-    _nameController.text = widget.food.name;
     return Scaffold(
       backgroundColor: Color(0xFF2D3447),
       appBar: AppBar(

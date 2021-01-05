@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:kitchenventory/Components/FoodQuantityTextField.dart';
-import 'package:kitchenventory/Models/Food.dart';
-import 'package:kitchenventory/Screens/NewFoodItem/NewFoodBestBeforeDate.dart';
-import 'package:kitchenventory/Components/FoodCardDescription.dart';
+import 'package:TracKit/Components/FoodQuantityTextField.dart';
+import 'package:TracKit/Models/Food.dart';
+import 'package:TracKit/Screens/NewFoodItem/NewFoodBestBeforeDate.dart';
+import 'package:TracKit/Components/FoodCardDescription.dart';
 
 //For dropdown
 const Map<String, QuantityType> quantityTypeList = {

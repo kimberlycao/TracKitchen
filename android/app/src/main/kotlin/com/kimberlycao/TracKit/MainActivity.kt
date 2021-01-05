@@ -1,4 +1,4 @@
-package com.example.kitchenventory
+package com.kimberlycao.TracKit
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:kitchenventory/Home/AppHome.dart';
+import 'package:TracKit/Home/AppHome.dart';
 
 class EmailLoginForm extends StatefulWidget {
   @override

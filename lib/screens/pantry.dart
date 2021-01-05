@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:kitchenventory/Components/FoodList.dart';
-import 'package:kitchenventory/Screens/NewFoodItem/NewFoodItem.dart';
-import 'package:kitchenventory/Components/SearchBar.dart';
-import 'package:kitchenventory/Models/Food.dart';
-import 'package:kitchenventory/Services/APIUtils.dart';
+import 'package:TracKit/Components/FoodList.dart';
+import 'package:TracKit/Screens/NewFoodItem/NewFoodItem.dart';
+import 'package:TracKit/Components/SearchBar.dart';
+import 'package:TracKit/Models/Food.dart';
+import 'package:TracKit/Services/APIUtils.dart';
 
 class PantryScreen extends StatefulWidget {
   @override
@@ -32,7 +32,9 @@ class _PantryScreenState extends State<PantryScreen> {
               SizedBox(height: screenHeight * 0.02),
               SearchBar(),
               SizedBox(height: screenHeight * 0.02),
-              Expanded(child: Container(child: FoodList(PANTRY_LOCATION_ID))),
+              Expanded(
+                  child:
+                      Container(child: FoodList(location: PANTRY_LOCATION_ID))),
             ],
           ),
         ),

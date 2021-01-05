@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:kitchenventory/Components/EmailLoginForm.dart';
-import 'package:kitchenventory/Home/AppHome.dart';
-import 'package:kitchenventory/Screens/Login/SignUpForm.dart';
-import 'package:kitchenventory/Services/AuthUtils.dart';
+import 'package:TracKit/Components/EmailLoginForm.dart';
+import 'package:TracKit/Home/AppHome.dart';
+import 'package:TracKit/Screens/Login/SignUpForm.dart';
+import 'package:TracKit/Services/AuthUtils.dart';
 
 class LoginScreen extends StatefulWidget {
   @override

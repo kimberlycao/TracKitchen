@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:kitchenventory/Components/FoodCardDescription.dart';
+import 'package:TracKit/Components/FoodCardDescription.dart';
 
 class Food {
   String name;

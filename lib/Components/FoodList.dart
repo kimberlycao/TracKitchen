@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:kitchenventory/Components/FoodCard.dart';
-import 'package:kitchenventory/Services/APIUtils.dart';
+import 'package:TracKit/Components/FoodCard.dart';
+import 'package:TracKit/Services/APIUtils.dart';
 
 class FoodList extends StatelessWidget {
   final String location;
 
-  const FoodList(String s, {Key key, this.location}) : super(key: key);
+  const FoodList({Key key, this.location}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(

@@ -8,17 +8,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1077288358405:android:e30e8e85cec96baaf7c26c",
+        "mobilesdk_app_id": "1:1077288358405:android:99ed90143045e016f7c26c",
         "android_client_info": {
-          "package_name": "com.example.kitchenventory"
+          "package_name": "com.kimberlycao.TracKit"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1077288358405-j37tr4llqh22bb11upt3lfnttf4tj1u9.apps.googleusercontent.com",
+          "client_id": "1077288358405-o1jtckm4pefl2sgp6mqqav5nfo4ifvlt.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.kitchenventory",
+            "package_name": "com.kimberlycao.TracKit",
             "certificate_hash": "e068e7691383ca808e188745950baaf992ae3eae"
           }
         },

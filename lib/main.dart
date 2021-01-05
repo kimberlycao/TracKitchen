@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kitchenventory/Screens/Login/LoginScreen.dart';
+import 'package:TracKit/Screens/Login/LoginScreen.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:dio/dio.dart';
 
 class FoodNameTextField extends StatefulWidget {
   const FoodNameTextField({
@@ -14,6 +15,16 @@ class FoodNameTextField extends StatefulWidget {
 }
 
 class _FoodNameTextFieldState extends State<FoodNameTextField> {
+/*   void getFoodAutocomplete(String text) async {
+    if (text.isEmpty) {
+      return;
+    }
+
+    String 
+    Response response = await Dio().get()
+
+  } */
+
   @override
   Widget build(BuildContext context) {
     return TextField(
@@ -29,6 +40,9 @@ class _FoodNameTextFieldState extends State<FoodNameTextField> {
           focusedBorder: UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.white))),
       style: TextStyle(color: Colors.white, fontSize: 20.0),
+      onChanged: (text) {
+        //getFoodAutocomplete(text);
+      },
     );
   }
 }

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:kitchenventory/Home/AppHome.dart';
-import 'package:kitchenventory/Models/Food.dart';
+import 'package:TracKit/Home/AppHome.dart';
+import 'package:TracKit/Models/Food.dart';
 import 'package:intl/intl.dart';
-import 'package:kitchenventory/Components/FoodCardDescription.dart';
+import 'package:TracKit/Components/FoodCardDescription.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:kitchenventory/Services/FirebaseUtils.dart';
+import 'package:TracKit/Services/FirebaseUtils.dart';
 
 class NewFoodReview extends StatelessWidget {
   final Food food;

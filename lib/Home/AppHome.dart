@@ -1,9 +1,9 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:kitchenventory/Screens/Freezer.dart';
-import 'package:kitchenventory/Screens/Pantry.dart';
-import 'package:kitchenventory/Screens/Refrigerator.dart';
-import 'package:kitchenventory/Screens/UserProfile.dart';
+import 'package:TracKit/Screens/Freezer.dart';
+import 'package:TracKit/Screens/Pantry.dart';
+import 'package:TracKit/Screens/Refrigerator.dart';
+import 'package:TracKit/Screens/UserProfile.dart';
 
 class AppHome extends StatefulWidget {
   @override

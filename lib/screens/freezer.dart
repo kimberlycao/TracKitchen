@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kitchenventory/Components/FoodList.dart';
-import 'package:kitchenventory/Components/SearchBar.dart';
-import 'package:kitchenventory/Services/APIUtils.dart';
+import 'package:TracKit/Components/FoodList.dart';
+import 'package:TracKit/Components/SearchBar.dart';
+import 'package:TracKit/Services/APIUtils.dart';
 
 class FreezerScreen extends StatefulWidget {
   @override
@@ -28,7 +28,9 @@ class _FreezerScreenState extends State<FreezerScreen> {
             SizedBox(height: screenHeight * 0.02),
             SearchBar(),
             SizedBox(height: screenHeight * 0.02),
-            Expanded(child: Container(child: FoodList(FREEZER_LOCATION_ID))),
+            Expanded(
+                child:
+                    Container(child: FoodList(location: FREEZER_LOCATION_ID))),
           ],
         ),
       ),
