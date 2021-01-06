@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:dio/dio.dart';
+import 'package:TracKit/Services/APIUtils.dart';
 
 class FoodNameTextField extends StatefulWidget {
   const FoodNameTextField({
-    Key key,
     @required TextEditingController nameController,
   })  : _nameController = nameController,
-        super(key: key);
+        super();
 
   final TextEditingController _nameController;
 
@@ -15,34 +14,28 @@ class FoodNameTextField extends StatefulWidget {
 }
 
 class _FoodNameTextFieldState extends State<FoodNameTextField> {
-/*   void getFoodAutocomplete(String text) async {
-    if (text.isEmpty) {
-      return;
-    }
-
-    String 
-    Response response = await Dio().get()
-
-  } */
-
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      controller: widget._nameController,
-      textAlign: TextAlign.center,
-      cursorColor: Colors.white,
-      decoration: InputDecoration(
-          hintText: "Mushrooms, Chicken,...",
-          hintStyle: TextStyle(
-              fontStyle: FontStyle.italic,
-              color: Colors.white30,
-              fontSize: 20.0),
-          focusedBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: Colors.white))),
-      style: TextStyle(color: Colors.white, fontSize: 20.0),
-      onChanged: (text) {
-        //getFoodAutocomplete(text);
-      },
+    return Column(
+      children: [
+        TextField(
+          controller: widget._nameController,
+          textAlign: TextAlign.center,
+          cursorColor: Colors.white,
+          decoration: InputDecoration(
+              hintText: "Mushrooms, Chicken,...",
+              hintStyle: TextStyle(
+                  fontStyle: FontStyle.italic,
+                  color: Colors.white30,
+                  fontSize: 20.0),
+              focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.white))),
+          style: TextStyle(color: Colors.white, fontSize: 20.0),
+          onChanged: (query) {
+            getFoodAutocomplete(query);
+          },
+        ),
+      ],
     );
   }
 }

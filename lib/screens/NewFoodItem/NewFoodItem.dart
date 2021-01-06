@@ -28,7 +28,6 @@ class _NewFoodNameState extends State<NewFoodName> {
           child: Padding(
         padding: const EdgeInsets.all(40.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("Enter food item:",
                 style: TextStyle(fontSize: 25.0, color: Colors.white)),
@@ -36,6 +35,7 @@ class _NewFoodNameState extends State<NewFoodName> {
               padding: const EdgeInsets.all(20.0),
               child: FoodNameTextField(nameController: _nameController),
             ),
+            Container(),
             RaisedButton(
                 onPressed: () {
                   widget.food.name = _nameController.text;

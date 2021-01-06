@@ -13,7 +13,7 @@ class _SignUpFormState extends State<SignUpForm> {
   /// Validates email and password
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
-  /// Tracks changes in textfield
+  /// Tracks changes in the textfields
   final TextEditingController _firstNameController = TextEditingController();
   final TextEditingController _lastNameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
@@ -95,11 +95,14 @@ class _SignUpFormState extends State<SignUpForm> {
               ),
               Container(
                 alignment: Alignment.center,
-                child: Text(_success == null
-                    ? ''
-                    : (_success
-                        ? 'Successfully registered ' + _userEmail
-                        : 'Registration failed')),
+                child: Text(
+                  _success == null
+                      ? ''
+                      : (_success
+                          ? 'Successfully registered ' + _userEmail
+                          : 'Registration failed'),
+                  style: TextStyle(color: Colors.white),
+                ),
               )
             ],
           ),
