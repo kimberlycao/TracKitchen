@@ -1,4 +1,4 @@
-<h1 align = "center"> TracKitchen </h1>
+<h1 align = "center"> TracKitchen :man_cook: :woman_cook: </h1>
 
 ## Table of Contents
 - [Introduction](#introduction)
