@@ -5,7 +5,7 @@
 - [Motivation](#motivation)
 - [Developing](#developing)
 - [Screenshot](#screenshot)
-- [What's Next?](#what's-next?)
+- [What's Next?](#what-is-next?)
 
 ## Introduction
 
@@ -26,6 +26,6 @@ This app assists in reducing food waste and makes keeping track of groceries eas
 ## Screenshot
 <img src = 'assets/images/TracKit_image.png' width = 300>
 
-## What's Next?
+## What is Next?
 - Adding a clean up functionality that will automatically filter out expired foods
 - Suggesting recipes based on what users currently have
