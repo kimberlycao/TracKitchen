@@ -5,7 +5,7 @@
 - [Motivation](#motivation)
 - [Developing](#developing)
 - [Screenshot](#screenshot)
-- [What's Next?](#what-is-next?)
+- [What is Next?](#what-is-next)
 
 ## Introduction
 
