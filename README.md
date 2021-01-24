@@ -26,6 +26,6 @@ This app assists in reducing food waste and makes keeping track of groceries eas
 ## Screenshot
 <img src = 'assets/images/TracKit_image.png' width = 300>
 
-## Whats Next?
+## What's Next?
 - Adding a clean up functionality that will automatically filter out expired foods
 - Suggesting recipes based on what users currently have
